@@ -1,0 +1,102 @@
+交换两个整形的值
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a = 10;
+	int b = 20;
+	printf( "a=%d b=%d\n", a, b );
+    a = a + b;
+	b = a - b;
+	a = a - b;
+	printf("a=%d b=%d\n", a, b);
+	system("pause");
+	return 0;
+}
+
+
+十个整数中求最大值
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int i = 0;
+	int max = 0;            
+	int arr[10] = { 0 };     
+	printf("请任意输入10个整数：");
+	for (i = 0; i <= 9; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	for (i = 1; i <= 9; i++)
+	{
+		if (arr[i] > max)
+		{
+			max= arr[i];
+		}
+	}
+	printf("最大的数为：%d", max);
+	system("pause");
+	return 0;
+}
+
+三个数从大到小排列
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	float a, b, c, t = 0;
+	scanf("%f""%f""%f",&a,&b,&c);
+	if (a<b)
+	{
+		t = a;
+		a = b;
+		b = t;
+	}
+	if (a<c)
+	{
+		t = a;
+		a = c;
+		c = t;
+	}
+	if (b<c)
+	{
+		t = b;
+		b = c;
+		c = t;
+	}
+	printf("%f %f %f", a, b, c);
+	system("pause");
+	return 0;
+}
+
+
+求两个数的最大公约数（相减法）
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a, b;
+	int c = 0;//计数
+	while (1)
+	{
+		printf("输入两个数字：");
+		scanf("%d%d",&a,&b);
+		while (a != b)
+		{
+			if (a > b)
+				a = a - b;
+			else
+				b = b - a;
+			c++;
+		}
+		printf("最大公约数是:%d\n", a);
+		printf("%d\n", c);
+	}
+	system("pause");
+	return 0;
+}
