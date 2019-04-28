@@ -1,0 +1,75 @@
+交换两个数组的值
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a[4] = { 1, 2, 3, 4 };
+	int b[4] = { 9, 8, 7, 6 };
+	int i;
+	for (i = 0; i < 4; i++)
+	{
+		int r;
+		r = a[i];
+		a[i] = b[i];
+		b[i] = r;
+	}
+
+	for (i = 0; i < 4; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	printf("\n");
+	for (i = 0; i < 4; i++)
+	{
+		printf("%d ", b[i]);
+	}
+	printf("\n");
+    system("pause");
+	return 0;
+}
+
+
+计算1/1-1/2+1/3-1/4+1/5 …… + 1/99 - 1/100 的值。 
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a = 1;
+	double b = 2.0, sum = 1.0, term;
+	while (b < 101)
+	{
+		a = -a;
+		term = a / b;
+		sum = sum + term;
+		b++;
+	}
+	printf("%f", sum);
+    system("pause");
+	return 0;
+}
+
+
+计算1-100中有多少个9
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a = 0;
+	int i = 0;
+	for (i = 0; i < 100; i++)
+	{
+		if (i % 10 == 9||i/10==9)
+		{
+			a++;
+		}
+	}
+	printf("%d\n", a);
+    system("pause");
+	return 0;
+}
